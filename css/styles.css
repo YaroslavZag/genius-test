@@ -88,6 +88,7 @@ ul {
 
 /* Button */
 .button {
+  padding: 16px 32px;
   background: var(--color-brend-light);
   border: 2px solid var(--color-brend-light);
   color: var(--color-primary-light);
