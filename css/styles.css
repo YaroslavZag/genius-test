@@ -27,10 +27,12 @@
 }
 
 :root {
-  --color-brend-light: #819b57;
+  --color-brend-normal: #819b57;
   --color-primary-light: #faf4ea;
   --color-primary-dark: #31261a;
   --color-brend-dark: #465929;
+  --color-brend-light: #cfcfbc;
+  --color-secondary-dark: #a18268;
 }
 
 /* Base */
@@ -40,6 +42,7 @@
 }
 
 body {
+  background-color: var(--color-primary-light);
   color: var(--color-primary-dark);
   font-family: "Poppins", sans-serif;
   font-size: 18px;
@@ -91,8 +94,8 @@ ul {
 /* Button */
 .button {
   padding: 16px 32px;
-  background: var(--color-brend-light);
-  border: 2px solid var(--color-brend-light);
+  background: var(--color-brend-normal);
+  border: 2px solid var(--color-brend-normal);
   color: var(--color-primary-light);
   border-radius: 8px;
   cursor: pointer;
@@ -111,7 +114,7 @@ ul {
 }
 
 .link:hover {
-  color: var(--color-brend-light);
+  color: var(--color-brend-normal);
 }
 
 /* Header */
@@ -145,6 +148,10 @@ ul {
 .hero-section {
   padding: 272px 0;
   margin-bottom: 0;
+  background-image: url(../images/hero-section-backround.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
 }
 
 .hero-title {
@@ -155,13 +162,13 @@ ul {
 }
 
 .hero-title .accent {
-  color: var(--color-brend-light);
+  color: var(--color-brend-normal);
 }
 
 /* advantages section */
 
 .advantages-section {
-  background: var(--color-brend-light);
+  background: var(--color-brend-normal);
   padding: 16px;
 }
 
@@ -181,6 +188,10 @@ ul {
   font-size: 64px;
   font-weight: 900;
   line-height: 1.3;
+}
+
+.section-title.center {
+  text-align: center;
 }
 
 .section-title .accent {
@@ -208,7 +219,7 @@ ul {
 }
 
 .traditions-text .brand {
-  color: var(--color-brend-light);
+  color: var(--color-brend-normal);
   font-weight: 600;
 }
 
@@ -223,7 +234,16 @@ ul {
 /* Chef section */
 
 .chefs-title {
-  margin-bottom: 80px;
+  max-width: 540px;
+  margin: 0 auto 80px;
+}
+
+.chefs-title::before,
+.chefs-title::after {
+  display: block;
+  width: 352px;
+  border: 2px solid var(--color-brend-light);
+  content: "";
 }
 
 .chef-title {
@@ -232,6 +252,11 @@ ul {
   font-weight: 600;
 }
 
+.chef-image {
+  border-radius: 4px 4px 4px 200px;
+  box-shadow: -16px 16px 0 0 var(--color-primary-light),
+    -16px 16px 0 2px var(--color-secondary-dark);
+}
 /* Format section */
 
 .formats-title {
@@ -259,9 +284,15 @@ ul {
 }
 
 .format-card {
-  border: 1px solid black; /* remove*/
+  height: 444px;
   border-radius: 16px;
   padding: 24px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(49, 38, 26, 0) 55.21%,
+    rgba(49, 38, 26, 0.71) 72.92%,
+    #31261a 100%
+  );
 }
 
 /* Contact section */
@@ -271,6 +302,14 @@ ul {
 }
 /* Footer */
 
+.footer {
+  background-image: url(../images/footer-background.png);
+  background-color: var(--color-primary-dark);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .address-link {
   color: var(--color-primary-light);
   font-size: 16px;
@@ -279,7 +318,7 @@ ul {
 }
 
 .address-link:hover {
-  color: var(--color-brend-light);
+  color: var(--color-brend-normal);
 }
 
 .address-copyright {
