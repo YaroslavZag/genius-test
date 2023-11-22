@@ -391,11 +391,12 @@ ul {
 
 .contact-container {
   display: flex;
-  gap: 32px;
+  gap: 22px;
 }
 
 .contact-title {
   padding-bottom: 16px;
+  margin-bottom: 0;
 }
 
 .contact-map {
@@ -513,6 +514,8 @@ ul {
   max-width: 880px;
   height: 100%;
   max-height: 880px;
+  padding: 128px;
+  overflow-y: auto;
   background-color: var(--color-primary-light);
   border-radius: 32px;
 }
@@ -521,4 +524,61 @@ ul {
   position: absolute;
   top: 40px;
   right: 40px;
+}
+
+/* Form */
+
+.form-field {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.form-label {
+  position: absolute;
+  left: 42px;
+  top: 16px;
+}
+
+.form-input {
+  padding: 16px 42px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 1.17;
+  border: 1px var(--color-secondary-dark) solid;
+  background-color: transparent;
+}
+
+.form-input:focus {
+  border-color: var(--color-brend-normal);
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: var(--color-secondary-dark);
+  font-size: 16px;
+  line-height: 1.17;
+}
+
+.form-input:focus::placeholder {
+  color: var(--color-primary-dark);
+}
+
+.form-button {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+.form-terms {
+  max-width: 210px;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.form-terms-link {
+  color: var(--color-primary-dark);
+  text-underline-offset: 2px;
 }
