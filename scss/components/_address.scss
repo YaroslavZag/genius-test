@@ -1,0 +1,29 @@
+.address {
+  flex-basis: 50%;
+  display: flex;
+  gap: 20px;
+
+  &__link {
+    color: var(--color-primary-light);
+    font-size: 16px;
+    font-weight: 300;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-brend-normal);
+    }
+  }
+
+  &__icon {
+    fill: var(--color-primary-light);
+
+    &:hover {
+      fill: var(--color-brend-normal);
+    }
+  }
+
+  &__copyright {
+    font-size: 14px;
+    color: #a18268;
+  }
+}
